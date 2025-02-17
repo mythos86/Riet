@@ -69,14 +69,18 @@ body {
     /* center horizontally */
     align-items: flex-start;
     /* align at the top */
-    height: 100vh;
-    /* make body take up full viewport height */
+    height: auto;
+    /* allow content height to expand */
+    min-height: 100vh;
+    /* ensure the body takes up at least the viewport height */
     margin: 0;
     /* remove default margin */
     flex-direction: column;
     /* stack the elements vertically */
     padding-top: 20vh;
     /* ensure space between title and content */
+    overflow-y: auto;
+    /* show vertical scrollbar when content overflows */
 }
 
 /* Message container flex setup */
