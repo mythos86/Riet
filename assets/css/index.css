@@ -1,80 +1,82 @@
 /* index.css */
 body {
-    background-color: #ffccff;            /* light pink */
-    font-family: Arial, sans-serif;         /* font style */
-    overflow: hidden;                       /* hide the overflow */
-    
-    display: flex;                          /* enable flexbox */
-    justify-content: center;                /* center horizontally */
-    align-items: flex-start;                /* align at the top */
-    height: 100vh;                          /* make body take up full viewport height */
-    margin: 0;                              /* remove default margin */
-    flex-direction: column;                 /* stack the elements vertically */
+    background-color: #ffccff;  /* light pink */
+    font-family: Arial, sans-serif;  /* font style */
+    overflow: hidden;  /* hide the overflow */
+    display: flex;  /* enable flexbox */
+    justify-content: center;  /* center horizontally */
+    align-items: flex-start;  /* align at the top */
+    height: 100vh;  /* make body take up full viewport height */
+    margin: 0;  /* remove default margin */
+    flex-direction: column;  /* stack the elements vertically */
 }
 
 h1 {
-    color: #ff3366;                         /* pink */
-    font-size: 3rem;                        /* font size */
-    margin-top: 10vh;                       /* 10% from the top */
+    color: #ff3366;  /* pink */
+    font-size: 3rem;  /* font size */
+    margin-top: 10vh;  /* 10% from the top */
 }
 
+/* Title styling */
 .title {
-    position: absolute;                     /* position it relative to the body */
-    top: 5%;                                /* 5% from the top */
-    left: 50%;                              /* position it horizontally centered */
-    transform: translateX(-50%);            /* center it exactly */
-    text-align: center;                     /* center the text inside */
+    position: absolute;  /* position it relative to the body */
+    top: 5%;  /* 5% from the top */
+    left: 50%;  /* position it horizontally centered */
+    transform: translateX(-50%);  /* center it exactly */
+    text-align: center;  /* center the text inside */
 }
 
+/* Message container flex setup */
 .message_container {
-    display: flex;                          /* flexbox for message containers */
-    justify-content: center;                /* center horizontally */
-    align-items: center;                    /* center vertically */
-    width: 100%;                            /* take up full width */
-    margin-top: 40px;                       /* space between Title and message containers */
+    display: flex;  /* flexbox for message containers */
+    justify-content: center;  /* center horizontally */
+    align-items: center;  /* center vertically */
+    width: 100%;  /* take up full width */
+    margin-top: 40px;  /* space between Title and message containers */
+    flex-wrap: wrap;  /* allow wrapping of messages on smaller screens */
 }
 
-.message_Jacky {
-    text-align: center;                     /* center text inside the container */
-    padding: 20px;                          /* padding around the text */
-    background-color: #fff;               /* white background */
-    border-radius: 10px;                    /* rounded corners */
-    width: 250px;                           /* fixed width */
-    margin: 0 20px;                         /* space between the message containers */
+/* Individual message styles */
+.message_Jacky, .message_nathalie, .message_chiara {
+    text-align: center;  /* center text inside the container */
+    padding: 20px;  /* padding around the text */
+    background-color: #fff;  /* white background */
+    border-radius: 10px;  /* rounded corners */
+    width: 100%;  /* full width on smaller screens */
+    max-width: 250px;  /* limit the width to 250px on larger screens */
+    margin: 10px;  /* space between message containers */
 }
 
-.message_nathalie {
-    text-align: center;                     /* center text inside the container */
-    padding: 20px;                          /* padding around the text */
-    background-color: #fff;               /* white background */
-    border-radius: 10px;                    /* rounded corners */
-    width: 250px;                           /* fixed width */
-    margin-right: 20px;                     /* space to the right */
-}
+/* Media query for screens smaller than 768px (mobile devices) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;  /* smaller font size for mobile */
+    }
 
-.message_chiara {
-    text-align: center;                     /* center text inside the container */
-    padding: 20px;                          /* padding around the text */
-    background-color: #fff;               /* white background */
-    border-radius: 10px;                    /* rounded corners */
-    width: 250px;                           /* fixed width */  
-    margin-left: 20px;                      /* space to the left */
+    .message_container {
+        flex-direction: column;  /* stack messages vertically on small screens */
+    }
+
+    .message_Jacky, .message_nathalie, .message_chiara {
+        width: 90%;  /* make messages take up more space on smaller screens */
+        max-width: 100%;  /* allow the message containers to expand to full width */
+    }
 }
 
 .heart {
-    position: absolute;                     /* absolute position */
-    color: #ff3366;                       /* pink */
-    font-size: 2rem;                        /* font size */
-    animation: fall linear infinite;        /* animation */
+    position: absolute;  /* absolute position */
+    color: #ff3366;  /* pink */
+    font-size: 2rem;  /* font size */
+    animation: fall linear infinite;  /* animation */
 }
 
 @keyframes fall {
     from {
-        transform: translateY(-100px);      /* starting position */
-        opacity: 1;                         /* fully visible */
+        transform: translateY(-100px);  /* starting position */
+        opacity: 1;  /* fully visible */
     }
     to {
-        transform: translateY(100vh);       /* move down */
-        opacity: 0;                         /* fade out */
+        transform: translateY(100vh);  /* move down */
+        opacity: 0;  /* fade out */
     }
 }
