@@ -1,53 +1,58 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
-    <style>
-        body {
-            background-color: #ffccff;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
-        h1 {
-            color: #ff3366;
-            font-size: 3rem;
-            margin-top: 20vh;
-        }
-        .heart {
-            position: absolute;
-            color: #ff3366;
-            font-size: 2rem;
-            animation: fall linear infinite;
-        }
-        @keyframes fall {
-            from {
-                transform: translateY(-100px);
-                opacity: 1;
-            }
-            to {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
-        }
-    </style>
+    <!-- refer to the favicon -->
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+    <!-- refer to the css file -->
+    <link rel="stylesheet" href="assets/css/index.css">
+    <!-- refer to the js file -->
+    <script src="assets/js/index.js"></script>
 </head>
+
 <body>
-    <h1>Happy Birthday, Love!</h1>
-    <script>
-        function createHeart() {
-            const heart = document.createElement("div");
-            heart.classList.add("heart");
-            heart.innerHTML = "❤";
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
-            document.body.appendChild(heart);
-            setTimeout(() => {
-                heart.remove();
-            }, 5000);
-        }
-        setInterval(createHeart, 300);
-    </script>
+    <div class="title">
+        <h1>Happy Birthday, Love!</h1>
+    </div>
+    <div class="message_container">
+        <div class="message_nathalie">
+            <p><strong>Mijn moeder...,</strong></p>
+            <p>
+                Staat altijd voor iedereen klaar</br> 
+                Heeft super krachten</br> 
+                GEEFT DE FIJNSTE KNUFFELS</br> 
+                Heeft altijd een luisterend oor</br> 
+                Is mijn beste vriendin</br> 
+                Geeft onvoorwaardelijke liefde</br> 
+                Vergeeft en vergeet</br> </br> 
+                
+                Is de allerliefste moeder!!
+            </p>
+        </div>
+        <div class="message_Jacky">
+            <p><strong>Dear Love,</strong></p>
+            <p>
+                I'm not perfect. </br>
+                I make mistakes. </br>
+                I can be moody sometimes. </br>
+                But I promise you that if I say I love you, </br></br>
+                I mean it.
+            </p>
+        </div>
+        <div class="message_chiara">
+            <p><strong>Dear Love,</strong></p>
+            <p>
+                I'm not perfect. </br>
+                I make mistakes. </br>
+                I can be moody sometimes. </br>
+                But I promise you that if I say I love you, </br>
+                I mean it.
+            </p>
+        </div>
+    </div>
 </body>
+
 </html>
