@@ -13,9 +13,9 @@ body {
 }
 
 h1 {
-    color: #ff3366;                       /* pink */
+    color: #ff3366;                         /* pink */
     font-size: 3rem;                        /* font size */
-    margin-top: 10vh;                       /* 10% from the top */
+    margin-top: 2vh;                       /* 2% from the top */
 }
 
 .title {
