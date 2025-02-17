@@ -15,22 +15,33 @@ h1 {
 
 /* Animation for the heart */
 .heart {
-    position: fixed;  /* Use fixed to keep it within the viewport */
-    color: #ff3366;  /* pink */
-    font-size: 2rem;  /* font size */
-    animation: fall linear infinite;  /* animation */
-    z-index: 10;  /* ensures it's above other elements */
-    top: 0;  /* explicitly set starting position at the top */
+    position: fixed;
+    /* Use fixed to keep it within the viewport */
+    color: #ff3366;
+    /* pink */
+    font-size: 2rem;
+    /* font size */
+    animation: fall linear infinite;
+    /* animation */
+    z-index: 10;
+    /* ensures it's above other elements */
+    top: 0;
+    /* explicitly set starting position at the top */
 }
 
 @keyframes fall {
     from {
-        transform: translateY(0);  /* start from the top of the screen */
-        opacity: 1;  /* fully visible */
+        transform: translateY(0);
+        /* start from the top of the screen */
+        opacity: 1;
+        /* fully visible */
     }
+
     to {
-        transform: translateY(100vh);  /* move down */
-        opacity: 0;  /* fade out */
+        transform: translateY(100vh);
+        /* move down */
+        opacity: 0;
+        /* fade out */
     }
 }
 
@@ -42,36 +53,49 @@ body {
 
 /* Container for the three messages */
 .message_container {
-    display: flex; /* Use flexbox to align the messages side by side */
+    display: flex;
+    /* Use flexbox to align the messages side by side */
     justify-content: space-between;
     margin-top: 30px;
 }
 
 /* Individual message containers */
-.message_nathalie, .message_Jacky, .message_chiara {
-    flex: 1; /* Each message takes equal space */
-    margin: 10px; /* Add space between messages */
+.message_nathalie,
+.message_Jacky,
+.message_chiara {
+    flex: 1;
+    /* Each message takes equal space */
+    margin: 10px;
+    /* Add space between messages */
     padding: 15px;
     border: 1px solid #ccc;
     /* border-radius: 16px 0 16px 0; */
-    border-radius: 96px 24px 96px 24px;  /* Increase the rounding */
-    background-color: #f9f9f9;
+    border-radius: 192px 24px 192px 24px;
+    /* Increase the rounding */
+    /*background-color: #f9f9f9;*/
     background-color: rgb(174, 216, 253);
 }
 
 /* Ensure the messages look good */
-.message_nathalie p, .message_Jacky p, .message_chiara p {
+.message_nathalie p,
+.message_Jacky p,
+.message_chiara p {
     line-height: 1.6;
 }
 
 /* Responsive design for narrow screens */
 @media (max-width: 768px) {
     .message_container {
-        flex-direction: column; /* Stack the messages in a column */
-        align-items: center; /* Center-align the messages */
+        flex-direction: column;
+        /* Stack the messages in a column */
+        align-items: center;
+        /* Center-align the messages */
     }
 
-    .message_nathalie, .message_Jacky, .message_chiara {
-        margin-bottom: 20px; /* Add space between stacked messages */
+    .message_nathalie,
+    .message_Jacky,
+    .message_chiara {
+        margin-bottom: 20px;
+        /* Add space between stacked messages */
     }
 }
