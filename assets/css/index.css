@@ -15,12 +15,12 @@ body {
 h1 {
     color: #ff3366;                         /* pink */
     font-size: 3rem;                        /* font size */
-    margin-top: 2vh;                        /* 2% from the top */
+    margin-top: 10vh;                       /* 10% from the top */
 }
 
 .title {
     position: absolute;                     /* position it relative to the body */
-    top: 5%;                               /* 10% from the top */
+    top: 5%;                                /* 5% from the top */
     left: 50%;                              /* position it horizontally centered */
     transform: translateX(-50%);            /* center it exactly */
     text-align: center;                     /* center the text inside */
@@ -31,7 +31,7 @@ h1 {
     justify-content: center;                /* center horizontally */
     align-items: center;                    /* center vertically */
     width: 100%;                            /* take up full width */
-    margin-top: 20px;                       /* space between Title and message containers */
+    margin-top: 40px;                       /* space between Title and message containers */
 }
 
 .message_Jacky {
